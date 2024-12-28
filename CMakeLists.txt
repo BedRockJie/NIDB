@@ -25,6 +25,8 @@ endif()
 if(WIN32)
     # 设置应用程序图标（仅限Windows）
     set_property(TARGET nidb PROPERTY WIN32_EXECUTABLE TRUE)
+    # 设置应用程序为控制台应用程序
+    set_target_properties(nidb PROPERTIES LINK_FLAGS "/SUBSYSTEM:CONSOLE")
 endif()
 
 # 安装规则
